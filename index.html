@@ -3,22 +3,77 @@
 <head>
 <title>What are the chances of a new Rhythm Heaven&trade; game coming out this year?</title>
 <style>
-h1 { text-align: center; }
-h2 { text-align: center; }
+h1 { 
+	text-align: center;
+	color: #000000;
+}
+h2 { 
+	text-align: center;
+	color: #000000;
+}
 @font-face {
-  font-family: "Rodin";
-  src:url("rodin_merged.ttf");
+	font-family: "Rodin";
+	src: url("res/rodin_merged.ttf");
 }
 body { 
-  background-color: #FF0000;
-  font-family: Rodin
+	background-color: rgba(255, 255, 255, 0);
+	font-family: Rodin;
+	
+	background: url("res/bg.png");
+	
+	animation-name: scrollingbg;
+	animation-timing-function: linear;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+div.text {
+	background: rgba(255, 255, 255, 1);
+	color: #FFFFFF;
+	border: 0.75em solid #000000;
+	position: absolute;
+	padding: 1.5em;
+	border-radius: 2.5em;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+div.ghbutton {
+	position: relative;
+}
+div.ghbutton img {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 32px;
+	height: 32px;
+	border-radius: 1em;
+}
+
+@keyframes scrollingbg {
+	from {
+		background-position: 0% 0%;
+	}
+	to {
+		background-position: 256px -256px;
+	}
 }
 </style>
 
 <body>
 
+<div class="ghbutton">
+<a href="https://github.com/chrislo27/rh-this-year" target="_blank">
+	<img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"/>
+</a>
+</div>
+
+<div class="text">
 <h1>What are the chances of a new Rhythm Heaven&trade; game coming out this year?</h1>
-<h2>0%</h2>
+<h1>0%</h1>
+</div>
 
 </body>
 </html>
