@@ -1,6 +1,13 @@
 <!doctype html>
 <html>
 <head>
+<script>
+function recalculateTime()
+{
+	document.getElementById("randstuff").innerHTML = "1 in " + Math.floor((Math.random() * 23) + 1) + "." + Math.floor((Math.random() * 9) + 1) + " trillion";
+	document.getElementById("calculatorButton").remove();
+}
+</script>
 <title>What are the chances of a new Rhythm Heaven&trade; game coming out this year?</title>
 <style>
 h1 { 
@@ -40,6 +47,45 @@ div.text {
 	transform: translate(-50%, -50%);
 }
 
+div.button {
+	background: rgba(255, 255, 255, 1);
+	color: #FFFFFF;
+	border: 0.75em solid #000000;
+	position: absolute;
+	padding: 1.5em;
+	border-radius: 2.5em;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 70%);
+}
+
+div.button:hover {
+	background: rgba(222, 222, 222, 1);
+	color: #FFFFFF;
+	border: 0.75em solid #000000;
+	position: absolute;
+	padding: 1.5em;
+	border-radius: 2.5em;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 70%);
+}
+
+div.button:active {
+	background: rgba(169, 169, 169, 1);
+	color: #FFFFFF;
+	border: 0.75em solid #000000;
+	position: absolute;
+	padding: 1.5em;
+	border-radius: 2.5em;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, 70%);
+}
+
 div.ghbutton {
 	position: relative;
 }
@@ -72,7 +118,10 @@ div.ghbutton img {
 
 <div class="text">
 <h1>What are the chances of a new Rhythm Heaven&trade; game coming out this year?</h1>
-<h1>1 in 7.5 trillion</h1>
+<h1 id="randstuff"></h1>
+</div>
+<div class="button" id="calculatorButton" onclick="recalculateTime()">
+<h1>Click to calculate</h1>
 </div>
 
 </body>
